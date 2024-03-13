@@ -1,0 +1,112 @@
+<!doctype html> 
+<!-- Salvar na pasta PETSHOP criada na pasta www
+do Wamp Server com nome cadPet.html -->
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Cadastro de Pet</title>
+		<style>
+			.obrigatorio {color:red;}
+		</style>
+	</head>
+	
+	<body>
+		<h1>Cadastro de Pet</h1>
+		<form	action="gravarPet.php"
+				method="post"
+				enctype="multipart/form-data">
+				
+			Nome:
+			<span class="obrigatorio">*</span>
+			<input 	type="text"
+					name="nome"
+					maxlength="20"					
+					size="20"
+					required
+					placeholder="do pet"> 
+			<br>
+			Tipo:
+			<span class="obrigatorio">*</span>
+			<select name="tipo">
+				<option value="">Escolha</option>
+				<option value="C">Cachorro</option>
+				<option value="G">Gato</option>
+				<option value="P">Pássaro</option>
+				<option value="R">Réptil</option>
+				<option value="O">Outros</option>
+			</select>
+			
+			<br>
+			
+			<fieldset>
+				<legend>Sexo:</legend>
+				<input type="radio" name="sexo" value="M" checked> Masculino
+				<input type="radio" name="sexo" value="F" > Feminino
+			</fieldset>
+			
+			
+			Idade:
+			<input 	type="number"
+					name="idade"
+					value="0"
+					min="0"
+					max="99"> anos
+					
+			<br>
+			
+			Peso:
+			<input 	type="number"
+					name="peso"
+					value="0"
+					min="0"
+					max="99.999"
+					step="0.001"> anos
+					
+			<br>
+			
+			Dono:
+			<span class="obrigatorio">*</span>
+			<input 	type="text"
+					name="dono"
+					maxlength="30"
+					size="30"
+					required
+					placeholder="obrigatório"> 
+			<br>
+			
+			<input 	type="checkbox"
+					name="vacinado"
+					checked
+					value="1"> Vacinado
+			<br>
+			
+			Última Consulta:
+			<input 	type="date"
+					name="ultimaConsulta"
+					min="2000-01-02"
+					max="2024-12-31">
+					
+			<br>
+			
+			Médico responsável:
+			<input 	type="text"
+					name="medico"
+					maxlength="30"
+					size="30">
+			<br>
+			Foto do Pet:
+			<input type="file" name="foto">
+			<br>
+			
+			Observações: <br>
+			<textarea 	name="obs" 
+						rows="3"
+						cols="60"></textarea>
+			
+			<hr>
+			<input type="submit" value="Cadastrar">
+			<input type="reset" value="Limpar Dados">
+		</form>
+	</body>
+</html>
+<hr>

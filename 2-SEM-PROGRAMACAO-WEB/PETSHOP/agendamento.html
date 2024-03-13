@@ -1,0 +1,87 @@
+<!doctype html> 
+<!-- salvar como agendamento.html na pasta 
+    c:\wamp64\www\PETSHOP -->
+<html lang="pt-br">
+    <head>
+        <title>Agendamento de Serviço para Pet</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Agendamento do Pet</h1>    
+        <form   action="gravarAgendamento.php"
+                method="post"
+                enctype="multipart/form-data">
+            Data do agendamento:
+            <input 	type="date" 
+					name="data" 
+					value="2023-11-21">
+            <br>
+            Hora do agendamento:
+            <input     type="time" name="hora"> <br> 
+            
+            <fieldset>
+                <legend>Situação:</legend>
+                <input type="radio" name="situacao" value="A" checked> Agendado
+                <input type="radio" name="situacao" value="E"> Em execução
+                <input type="radio" name="situacao" value="F"> Finalizado
+                <input type="radio" name="situacao" value="C"> Cancelado
+            </fieldset>
+            
+            Nome:
+            <input  type="text"
+                    name="nome"
+                    required
+                    maxlength="30"
+                    size="30"
+                    placeholder="do animal">
+            <br>
+            
+            Tipo:
+            <select name="tipo">
+                <option value="">Escolha</option>
+                <option value="C">Cachorro</option>
+                <option value="G">Gato</option>
+                <option value="P">Pássaro</option>
+                <option value="R">Réptil</option>
+                <option value="O">Outros</option>
+            </select>
+            <br>
+            
+            Atendente:
+            <input  type="text" name="atendente"
+                    maxlength="30" size="30"> <br>
+            
+        
+            Serviço desejado:
+            <select name="tipoServico">
+                <option value="">Escolha</option>
+                <option value="BNH">Banho</option>
+                <option value="TOS">Tosa</option>
+                <option value="BNT">Banho e Tosa</option>
+                <option value="VET">Consulta Veterinária</option>
+                <option value="O">Outros</option>
+            </select>
+            <br>
+            Valor:
+            <input type="number" name="valor" value="0" min="0" step=".01"> <br>
+            
+            <input type="checkbox" name="pago" value="1"> Serviço foi pago pelo (a) cliente <br>
+            Cupom de desconto:
+            <input type="text" name="cupom" maxlength="20"> <br>
+
+            Documento (caso tenha):
+            <input type="file" name="documento"> <br>
+            
+			Foto:
+			<input type="file" name="foto"> <br>
+			
+            Observações:<br>
+            <textarea   name="obs"
+                        rows="5"
+                        cols="60"></textarea>
+            <hr>
+            <input type="submit" value="Agendar Atendimento">
+            <input type="reset" value="Limpar Campos">
+        </form>
+    </body>
+</html>
