@@ -1,1 +1,2 @@
-Atividades da Faculdade de acordo com as disciplinas
+TECNOLOGIAS APRENDIDAS AO LONGO DA MINHA JORNADA ACADEMICA 
+HTML, CSS, JAVASCRIPT, MYSQL, PHP, C++, C, PYTHON
