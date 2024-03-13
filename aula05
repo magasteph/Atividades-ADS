@@ -1,0 +1,19 @@
+create schema if not exists aula005;
+
+use aula005;
+
+create table if not exists tipo_pessoa(
+	cod_tipo_pessoa int,
+    desc_tipo_pessoa varchar(100)
+);
+
+create table if not exists pessoa(
+	cod_pessoa int,
+    nom_pessoa varchar(250),
+    cpf_pessoa varchar(16),
+    rg_pessoa varchar(12),
+    email_pessoa varchar(100),
+    dta_nasc_pessoa date,
+    idf_sexo varchar(1),
+    cod_tipo_pessoa int
+);
