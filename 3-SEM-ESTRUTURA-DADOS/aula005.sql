@@ -62,3 +62,23 @@ create table if not exists pessoa(
     constraint fk_tipo_pessoa foreign key (cod_tipo_pessoa)
     references tipo_pessoa (cod_tipo_pessoa)
 );
+
+drop table pessoa;
+
+create table if not exists pessoa(
+	cod_pessoa int not null auto_increment,
+    nom_pessoa varchar(250) not null,
+    cpf_pessoa varchar(16),
+    rg_pessoa varchar(12),
+    email_pessoa varchar(100),
+    dta_nasc_pessoa date  not null,
+    idf_sexo varchar(1)  not null,
+	idf_ativo varchar (1)  not null,
+    cod_tipo_pessoa int  not null, 
+    constraint pk_pessoa primary key (cod_pessoa),
+    constraint fk_tipo_pessoa foreign key (cod_tipo_pessoa)
+    references tipo_pessoa (cod_tipo_pessoa),
+	constraint uq_pessoa_cpf unique (cpf_pessoa),
+	constraint uq_pessoa_rg unique (rg_pessoa),
+	constraint uq_pessoa_email unique (email_pessoa)
+);
