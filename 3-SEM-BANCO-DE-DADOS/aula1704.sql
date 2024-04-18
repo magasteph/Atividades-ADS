@@ -33,7 +33,11 @@ insert into produto(nome_prod) values ('Galaxy S24'),('Redmi Note 9'), ('A50'), 
 
 select * from produto;
 
-insert into produto(nome_prod, fk_COD, situacao) values ('Galaxy S23',1,'INA'),
-														('Galaxy S22',1,'INA'),
-														('POCO FONE X5',2,'ATI'),
-														('Redmi Note 10',2,'ATI');
+insert into produto(nome_prod, fk_COD, situacao) values ('Galaxy S23',1,'INA'), ('Galaxy S22',1,'INA'),('POCO FONE X5',2,'ATI'),('Redmi Note 10',2,'ATI');
+
+use faculdade;                                                       
+select * from revisão.produto as prod;
+use revisão;                               
+
+select substring('botafogo campeão', 10, 7);                     
+select nome_prod, substring(nome_prod,2,3) from produto;
