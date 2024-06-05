@@ -3,13 +3,20 @@
 
 int main()
 {
-    int v[5] = {10,20,30,40,50};
+    // criar um scanf para o usuario colocar os dados do vetor e depois mostrar
+    int v[5];
     int i;
-    float soma = 0;
 
-    for(int i=0; i<5; i++){
-        soma += v[i];
+    for(i=0; i<5; i++){
+        printf("Digite os numeros dos vetores:\n");
+        scanf("%d", &v[i]);
     }
 
-    printf("%f", soma/5);
+    printf("Estes sao os numeros escolhidos:\n");
+
+    for(i=0; i<5; i++){
+        printf(" %d ", v[i]);
+    }
+
+    return 0;
 }
