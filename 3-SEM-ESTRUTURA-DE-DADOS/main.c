@@ -3,21 +3,13 @@
 
 int main()
 {
-    int num1, num2, soma, sub, div, mul;
+    int v[5] = {10,20,30,40,50};
+    int i;
+    float soma = 0;
 
-    printf("Calculadora \n");
-    printf("Digite dois numeros inteiros: \n");
-    scanf("%d %d", &num1, &num2 );
+    for(int i=0; i<5; i++){
+        soma += v[i];
+    }
 
-    soma = num1 + num2;
-    sub = num1 - num2;
-    mul = num1 * num2;
-    div = num1 / num2;
-
-    printf(" Soma: %d \n", soma);
-    printf("Subtracao: %d \n ", sub);
-    printf("Multiplicacao: %d \n ", mul);
-    printf("Divisao: %d \n", div);
-
-    return 0;
+    printf("%f", soma/5);
 }
