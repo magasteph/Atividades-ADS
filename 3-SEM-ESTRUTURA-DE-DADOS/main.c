@@ -3,19 +3,31 @@
 
 int main()
 {
-    // criar um scanf para o usuario colocar os dados do vetor e depois mostrar
-    int v[5];
-    int i;
+    int matrizA[4][4], matrizB[4][4], matrizC[4][4];
+    int i, j;
 
-    for(i=0; i<5; i++){
-        printf("Digite os numeros dos vetores:\n");
-        scanf("%d", &v[i]);
+    for(i=0; i<4;i++){
+        for(j=0;j<4;j++){
+            matrizA[i][j] = (i + j)*2;
+            printf(" %d ", matrizA[i][j]);
+        }
+        printf("\n");
+    }
+    for(i=0; i<4; i++){
+        for(j=0;j<4; j++){
+            matrizB[i][j] = (((i + j) *2) -100);
+            printf(" %d ", matrizB[i][j]);
+        }
+        printf("\n");
     }
 
-    printf("Estes sao os numeros escolhidos:\n");
+    for(i=0; i<4;i++){
+        for(j=0;j<4;j++){
+            matrizC[i][j]= matrizA[i][j] + matrizB[i][j];
 
-    for(i=0; i<5; i++){
-        printf(" %d ", v[i]);
+            printf(" %d ", matrizC[i][j]);
+        }
+        printf(" \n ");
     }
 
     return 0;
